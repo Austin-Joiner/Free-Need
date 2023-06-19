@@ -1,0 +1,25 @@
+body {
+   background-color: black;
+}
+.main-body {
+    background-color: #945c31;
+    height: 100%;
+
+}
+.title-card{
+    background-color: #d38140;
+    height: 150px;
+    width: 60%;
+
+}
+.text-card {
+    background-color: #32b2ce;
+    height: 100%;
+    width: 40%;
+}
+.image-card {
+    background-color: #72d23f;
+    height: 100%;
+    width: 40%;
+    margin-left: auto;
+}
