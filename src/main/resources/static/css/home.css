@@ -4,22 +4,43 @@ body {
 .main-body {
     background-color: #945c31;
     height: 100%;
+    width: 75%;
 
 }
 .title-card{
     background-color: #d38140;
-    height: 150px;
-    width: 60%;
-
+    height: 100px;
+    border-radius: 30px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 .text-card {
     background-color: #32b2ce;
-    height: 100%;
-    width: 40%;
+    /*height: 100%;*/
+    width: 30%;
+    height: 500px;
+    margin-left: 15px;
+    border-radius: 10px;
+    display: inline;
+
 }
 .image-card {
     background-color: #72d23f;
-    height: 100%;
-    width: 40%;
+    width: 30%;
+    display: inline;
+    height: 500px;
     margin-left: auto;
+    margin-right: 15px;
+    border-radius: 10px;
+
+}
+.image-card img {
+    /*transform: rotate(90deg);*/
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
