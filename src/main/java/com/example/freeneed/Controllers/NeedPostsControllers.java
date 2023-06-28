@@ -28,9 +28,8 @@ public class NeedPostsControllers {
     @GetMapping("/Need")
     public String toNeed(Model model) {
 
-        User user = new User();
-        long userId = user.getId();
-        user = userDao.findById(userId);
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        user = userDao.getReferenceById((long) user.getId());
         model.addAttribute("user", user);
 
         List<NeedPosts> posts = needPostsDao.findAll();
