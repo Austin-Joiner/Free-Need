@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Need Post</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/Needs}" th:object="${post}">
+  <label for="post"></label>
+  <input class="postNeed" type="text" id="post" th:field="*{title}">
+
+  <div class="submit-div">
+    <button class="submit-post" type="submit" id="post-submission">Post</button>
+  </div>
+</form>
+</body>
+</html>

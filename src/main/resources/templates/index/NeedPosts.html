@@ -25,14 +25,7 @@
 
 <h1>Need Posts</h1>
 
-<form th:method="POST" th:action="@{/Needs}">
-    <label for="post"></label>
-    <input class="postNeed" type="text" id="post" th:field="*{title}">
-
-    <div class="submit-div">
-        <button class="submit-post" id="post-submission">Post</button>
-    </div>
-</form>
+<a th:href="@{/}">Create Need Post</a>
 
 <div style="display: flex; justify-content: center">
     <div th:each="posts : ${post}" class="card" style="width: 500px; background-color: #d38140; display: flex; justify-content: center; text-align: center;">
