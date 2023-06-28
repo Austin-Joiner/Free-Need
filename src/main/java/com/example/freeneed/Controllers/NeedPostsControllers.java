@@ -7,6 +7,8 @@ import com.example.freeneed.Repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -38,5 +40,21 @@ public class NeedPostsControllers {
 
 
         return "index/NeedPosts";
+    }
+
+    @PostMapping("/Needs")
+    public String setNeed(@ModelAttribute NeedPosts newPost) {
+        User user = new User();
+        long userId = user.getId();
+        user = userDao.findById(userId);
+
+        NeedPosts post = new NeedPosts();
+
+        post.setTitle(newPost.getTitle());
+        post.setBody(newPost.getBody());
+        post.setUser(user);
+        needPostsDao.save(post);
+
+        return "redirect:/Need";
     }
 }
