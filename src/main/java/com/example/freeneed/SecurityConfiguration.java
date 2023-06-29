@@ -57,7 +57,7 @@ public class SecurityConfiguration {
                 .and()
                 .authorizeHttpRequests()
                 .requestMatchers(
-                        "/Need","/Free"
+                        "/Need","/Free","Create/Need", "Create/Free"
                         // only authenticated users can edit ads
                 )
                 .authenticated()

@@ -36,4 +36,13 @@ public class FreePostsControllers {
 
         return "index/FreePosts";
     }
+
+    @GetMapping("/Create/Free")
+    public String createFree(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        user = userDao.getReferenceById((long) user.getId());
+        model.addAttribute("user", user);
+
+        return "index/createFree";
+    }
 }

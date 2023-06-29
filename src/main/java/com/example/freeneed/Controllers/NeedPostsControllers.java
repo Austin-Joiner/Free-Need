@@ -41,6 +41,15 @@ public class NeedPostsControllers {
 
         return "index/NeedPosts";
     }
+
+    @GetMapping("/Create/Need")
+    public String createNeed(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        user = userDao.getReferenceById((long) user.getId());
+        model.addAttribute("user", user);
+
+        return "index/createNeed";
+    }
 //    @GetMapping("/Need/Create")
 //    public String createNeed(Model model) {
 //
